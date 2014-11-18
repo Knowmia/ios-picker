@@ -1,3 +1,87 @@
+v 4.0.0 - Major Release - ??/??/2014
+- Library now targets iOS 8 and OS X 10.9 and requires Xcode 6 or later.
+- CocoaPods is now the recommended method for integrating our library into your app.
+- Introducing support for OS X — check our wiki for more information (https://github.com/Ink/ios-picker/wiki)
+- Updating FPPickerController and FPSaveController delegates (check FPExternalHeaders.h to learn about the new protocols.)
+
+v 3.2.9 - 10/24/2014
+- Added the ability to perform user-definable image and video preprocessing.
+- Added AFNetworkingOperationFailingURLResponseDataErrorKey symbol renaming to avoid conflicts with AFNetworking 2.4.1.
+- Added https://login.yahoo.com/ and https://edit.yahoo.com/ to allowedUrlPrefix.plist
+
+v 3.2.8 - 09/23/2014
+- Fixed an UI reflow issue when rotating the device using a local source (FPLocalController).
+- Fixed a bug in FPPickerController that was preventing the delegate from being called in certain conditions.
+- Fixed a bug that was causing the upload button not to be visible in landscape mode when using a version of iOS between 7.1 and 8.0 (both non inclusive.)
+- Improved iPhone support on included iOS demo app.
+- FPPickerControllerSource is now returned when using either camera roll and camera sources.
+- FPPickerControllerRemoteURL is now consistently returned as a NSURL with any source.
+
+v 3.2.7 - 09/17/2014
+- Updated AFNetworking dependency to 2.4.1.
+- Fixed another case where FPPickerControllerRemoteURL was missing.
+
+v 3.2.6 - 09/16/2014
+- Fixed an UI locking issue during authentication when targetting iOS 8.
+
+v 3.2.5 - 09/15/2014
+- Fixed missing FPPickerControllerRemoteURL bug introduced in v3.2.4.
+
+v 3.2.4 - 09/12/2014
+- Remote sources now return the associated FPSource used in FPPickerControllerSource.
+- Local sources now return the associated ALAsset used in FPPickerControllerOriginalAsset.
+- Greatly reduced memory usage by returning a compressed version of the image in FPPickerControllerOriginalImage (this is particularly relevant when uploading a large number of images.)
+- Fixed a glitch in cell selection that could lead to a crash.
+- Fixed a minor UI glitch in iOS 8.
+
+v 3.2.3 - 08/28/2014
+- Improving compatibility with Instagram (issue #56 — @nickhart).
+
+v 3.2.2 - 08/12/2014
+- Added https://login.yahoo.com/ylc to allowedUrlPrefix.plist
+- Ensure FPPickerControllerKey is returned when key (i.e. S3 filename) is available
+- Misc minor bugfixes
+
+v 3.2.1 - 08/01/2014
+- Fixed a crash when handling next page loading on Google Drive, and other sources.
+
+v 3.2.0 - 07/31/2014
+- FPConfig is now the preferred way to set API key, security settings, etc. (Info plist configuration is still supported but deprecated.)
+- Added "pull to refresh" gesture to remote source table views.
+- Changed caching policy to prevent remote source table results from becoming stale.
+- Fixed ambiguous mimetype on camera picture uploads (defaulting to image/jpeg now.)
+- Added https://*.app.box.com/api/ to allowedUrlPrefix.plist
+
+v 3.1.0 - 07/17/2014
+- Added security support
+- Added store options support
+
+v 3.0.3 - 07/09/2014
+- Fixed multipart upload data corruption
+
+v 3.0.2 - 07/09/2014
+- Fixed broken mimetype filtering
+- Fixed that FPPicker.framework was not using the release build configuration
+- Return FPPickerControllerKey when Amazon S3 Storage is used
+- Updated FPSourceGoogleDrive to 'googledrive'
+
+v 3.0.1 - 07/04/2014
+- Switched from legacy GDrive client url to GoogleDrive
+
+v 3.0.0 - Major Release - 06/27/2014
+- Modernized code
+- Library now targets iOS 6.0 and later
+- Library now is also available as a CocoaPod
+- Library now depends on AFNetworking 2.x
+- Several memory-related bugfixes
+- Fixed freezes on iPhone 4
+- and more.
+
+v 2.7.0 - 06/06/2014
+- Updated Box and Facebook allowedUrls
+- Fixed bug with crash when you start uploading files with keyboard opened
+- Renamed SkyDrive to OneDrive and update OneDrive path to API
+
 v 2.6.1 - 12/18/2013
 - Updated code base to use dialog.filepicker.io hostname
 
